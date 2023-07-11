@@ -72,7 +72,6 @@ module "launch-helm" {
 Replace `path/to/launch-helm` with the path to the `launch-helm` module directory or repository, and set the required variables according to your needs.
 
 <!-- BEGIN_TF_DOCS -->
-
 ## Requirements
 
 | Name | Version |
@@ -122,7 +121,6 @@ No modules.
 |------|-------------|
 | <a name="output_helm_release_chart"></a> [helm\_release\_chart](#output\_helm\_release\_chart) | The Helm release |
 | <a name="output_helm_release_status"></a> [helm\_release\_status](#output\_helm\_release\_status) | The status of the Helm release |
-
 <!-- END_TF_DOCS -->
 
 ## Examples
