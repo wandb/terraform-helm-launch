@@ -12,7 +12,7 @@ variable "helm_chart_version" {
 variable "agent_labels" {
   description = "Agent labels"
   type        = map(string)
-  default = {}
+  default     = {}
 }
 
 variable "agent_api_key" {
@@ -81,7 +81,7 @@ variable "git_creds" {
 variable "service_account_annotations" {
   description = "Annotations for the wandb service account"
   type        = map(string)
-  default = {}
+  default     = {}
 }
 
 variable "azure_storage_access_key" {

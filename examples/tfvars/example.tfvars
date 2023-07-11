@@ -1,4 +1,4 @@
-helm_repository = "https://wandb.github.io/helm-charts"
+helm_repository    = "https://wandb.github.io/helm-charts"
 helm_chart_version = "0.8.0"
 
 
@@ -23,13 +23,13 @@ agent_labels = {
   "azure.workload.identity/use" = "true"
 }
 
-agent_api_key = "local-fc8..."
-agent_image = "wandb/launch-agent-dev:f0cf9e0a"
+agent_api_key           = "local-fc8..."
+agent_image             = "wandb/launch-agent-dev:f0cf9e0a"
 agent_image_pull_policy = "Always"
 
 agent_resources = {
   limits = {
-    cpu = "1"
+    cpu    = "1"
     memory = "1Gi"
   }
 }

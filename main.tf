@@ -9,10 +9,10 @@ locals {
 }
 
 resource "helm_release" "launch_agent" {
-  name = "wandb-launch-agent"
+  name       = "wandb-launch-agent"
   repository = var.helm_repository
-  chart   = "launch-agent"
-  version = var.helm_chart_version
+  chart      = "launch-agent"
+  version    = var.helm_chart_version
 
   namespace = var.namespace
 
@@ -22,7 +22,7 @@ resource "helm_release" "launch_agent" {
   wait             = true
   reset_values     = true
   force_update     = true
-  
+
   lint = true
 
   dynamic "set" {
