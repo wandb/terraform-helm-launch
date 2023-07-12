@@ -18,9 +18,10 @@ To use the `launch-helm` module, you will need to define several variables in a 
 ```hcl
 # Required
 helm_chart_version = "0.8.0"
-agent_image   = "wandb/launch-agent-dev:f0cf9e0a"
-base_url      = "http://host.docker.internal:8080"
-agent_api_key = "local-9ff3...."
+agent_image        = "wandb/launch-agent-dev:f0cf9e0a"
+base_url           = "http://host.docker.internal:8080"
+agent_api_key      = "local-9ff3...."
+
 launch_config = <<EOF
   queues: [docker-desktop]
   entity: docker-desktop
@@ -46,8 +47,9 @@ additional_target_namespaces = ["default"]
 2. Use the `launch-helm` module in your Terraform configuration:
 
 ```hcl
-module "launch-helm" {
-  source = "path/to/launch-helm"
+module "launch" {
+  source  = "wandb/launch/helm"
+  version = "1.0.1"
 
   helm_repository              = var.helm_repository
   helm_chart_version           = var.helm_chart_version
@@ -68,8 +70,6 @@ module "launch-helm" {
 
 3. Run `terraform init` to initialize the Terraform working directory.
 4. Run `terraform apply -var-file="your.tfvars"` to apply the changes.
-
-Replace `path/to/launch-helm` with the path to the `launch-helm` module directory or repository, and set the required variables according to your needs.
 
 <!-- BEGIN_TF_DOCS -->
 

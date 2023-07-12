@@ -10,8 +10,9 @@ provider "helm" {
   }
 }
 
-module "launch_helm" {
-  source = "../"
+module "launch" {
+  source  = "wandb/launch/helm"
+  version = "1.0.1"
 
   helm_repository              = var.helm_repository
   helm_chart_version           = var.helm_chart_version
